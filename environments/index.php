@@ -40,6 +40,9 @@ return [
             'backend/models',
             'backend/views',
             'backend/controllers',
+            'frontend/models',
+            'frontend/views',
+            'frontend/controllers',
         ],
         'setExecutable' => [
             'yii',

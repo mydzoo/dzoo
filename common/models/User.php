@@ -4,6 +4,7 @@ namespace common\models;
 
 use Yii;
 use yii\web\IdentityInterface;
+use backend\models\UserData;
 
 /**
  * This is the model class for table "{{%user}}".
@@ -36,6 +37,14 @@ class User extends \yii\db\ActiveRecord  implements IdentityInterface
             [['role_id', 'blocked_at', 'status'], 'integer'],
             [['username', 'password', 'avatar', 'auth_key'], 'string', 'max' => 255],
         ];
+    }
+
+    /**
+     * get UserData object of current user
+     */
+    public function getData()
+    {
+        return $this->hasOne(UserData::className(), ['user_id' => 'id']); 
     }
 
     /**

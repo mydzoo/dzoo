@@ -36,7 +36,13 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => 'User', 'url' => ['/user/index']],
+        ['label' => 'Gii', 'url' => ['/gii']],
+        ['label' => '用户', 'url' => ['/user/index']],
+        ['label' => '话题', 'url' => ['/topic/index']],
+        ['label' => '收藏', 'url' => ['/topic-collect/index']],
+        ['label' => '用户数据 Data', 'url' => ['/user-data/index']],
+        ['label' => '通知', 'url' => ['/notice/index']],
+        ['label' => '积分日志', 'url' => ['/credit-log/index']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
